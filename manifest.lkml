@@ -6,6 +6,21 @@ project_name: "looker_ai_print"
 # local_dependency: {
 #   project: "name_of_other_project"
 # }
+constant: GCP_PROJECT_ID {
+  value: "genaimarketingdemo"
+  export: override_optional
+}
+
+constant: GCP_LOCATION {
+  value: "us-central1"
+  export: override_optional
+}
+
+constant: GCS_BUCKET_NAME {
+  value: "report_html_templates_genaimarketingdemo"
+  export: override_optional
+}
+
 application: lookereiprint {
   label: "lookereiprint"
   url: "https://localhost:8080/bundle.js"
