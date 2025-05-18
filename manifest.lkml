@@ -11,6 +11,8 @@ application: lookereiprint {
   url: "https://localhost:8080/bundle.js"
   # file: "bundle.js
   entitlements: {
-    core_api_methods: ["me"] #Add more entitlements here as you develop new functionality
+    core_api_methods: ["me", "current_user", "all_user_attributes"]
+    local_storage: yes
+    # external_api_urls: ["YOUR_FASTAPI_URL_WHEN_YOU_CALL_IT"]
   }
 }
