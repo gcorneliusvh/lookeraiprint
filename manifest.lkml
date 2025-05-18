@@ -17,7 +17,7 @@ application: lookereiprint {
     use_embeds: yes
     core_api_methods: ["all_connections","search_folders", "run_inline_query", "me", "current_user", "all_looks", "run_look"]
     external_api_urls: ["https://6371-2001-569-5925-3000-216-3eff-fe9a-a055.ngrok-free.app"]
-    scoped_user_attributes: ["client_id"]
+    # scoped_user_attributes: ["client_id"]
     global_user_attributes: ["client_id"]
   }
 }
