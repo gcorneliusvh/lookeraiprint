@@ -25,7 +25,7 @@ application: lookereiprint {
     use_form_submit: yes
     use_embeds: yes
     core_api_methods: ["all_user_attributes","all_connections","search_folders", "run_inline_query", "me", "current_user", "all_looks", "run_look"]
-    external_api_urls: ["https://f687-2001-569-5925-3000-216-3eff-fe9a-a055.ngrok-free.app"] # Ensure this is your current ngrok URL if it's dynamic
+    external_api_urls: ["https://f201-2001-569-5925-3000-216-3eff-fe9a-a055.ngrok-free.app"] # Ensure this is your current ngrok URL if it's dynamic
     global_user_attributes: ["client_id"]
   }
 }
