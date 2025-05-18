@@ -22,10 +22,13 @@ application: lookereiprint {
     local_storage: yes # Assuming 'yes' is validated by your Looker instance
     navigation: yes
     new_window: yes
-    new_window_external_urls: ["https://885d-2001-569-5925-3000-216-3eff-fe9a-a055.ngrok-free.app/*"]
+    new_window_external_urls: [
+      "https://885d-2001-569-5925-3000-216-3eff-fe9a-a055.ngrok-free.app/*",
+      "data:*"
+    ]
     use_form_submit: yes
     use_embeds: yes
-    core_api_methods: ["all_user_attributes","all_connections","search_folders", "run_inline_query", "me", "current_user", "all_looks", "run_look"]
+    core_api_methods: ["all_lookml_models", "lookml_model_explore","all_user_attributes","all_connections","search_folders", "run_inline_query", "me", "current_user", "all_looks", "run_look"]
     external_api_urls: ["https://885d-2001-569-5925-3000-216-3eff-fe9a-a055.ngrok-free.app"] # Ensure this is your current ngrok URL if it's dynamic
     global_user_attributes: ["client_id"]
   }
