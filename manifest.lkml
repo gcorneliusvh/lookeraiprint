@@ -23,7 +23,7 @@ application: lookereiprint {
     navigation: yes
     new_window: yes
     new_window_external_urls: [
-      "https://885d-2001-569-5925-3000-216-3eff-fe9a-a055.ngrok-free.app/*",
+      "https://c530-207-216-175-143.ngrok-free.app/*",
       "data:*"
     ]
     use_form_submit: yes
