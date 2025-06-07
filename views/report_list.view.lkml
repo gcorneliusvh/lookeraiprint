@@ -1,6 +1,20 @@
 view: report_list {
   sql_table_name: `genaimarketingdemo.report_printing.report_list` ;;
 
+  dimension: base_query_gcspath {
+    type: string
+    description: "GCS path to the base_query.sql file for the template."
+    sql: ${TABLE}.BaseQueryGCSPath ;;
+  }
+  dimension: base_query_schema_json {
+    type: string
+    description: "JSON string representation of the base SQL query's result schema."
+    sql: ${TABLE}.BaseQuerySchemaJSON ;;
+  }
+  dimension: calculation_row_configs_json {
+    type: string
+    sql: ${TABLE}.CalculationRowConfigsJSON ;;
+  }
   dimension_group: created_timestamp {
     type: time
     description: "Timestamp of when this report definition was first created."
@@ -11,6 +25,10 @@ view: report_list {
     type: string
     description: "Optional: A brief description of the report."
     sql: ${TABLE}.Description ;;
+  }
+  dimension: field_display_configs_json {
+    type: string
+    sql: ${TABLE}.FieldDisplayConfigsJSON ;;
   }
   dimension: footer {
     type: string
@@ -38,6 +56,14 @@ view: report_list {
     timeframes: [raw, time, date, week, month, quarter, year]
     sql: ${TABLE}.LastGeneratedTimestamp ;;
   }
+  dimension: latest_template_version {
+    type: number
+    sql: ${TABLE}.LatestTemplateVersion ;;
+  }
+  dimension: look_configs_json {
+    type: string
+    sql: ${TABLE}.LookConfigsJSON ;;
+  }
   dimension: looker_explore_url {
     type: string
     description: "Optional: URL to the Looker Explore this report definition is based on or related to."
@@ -58,6 +84,11 @@ view: report_list {
     description: "The unique name or identifier for the report definition. Acts as a primary key."
     sql: ${TABLE}.ReportName ;;
   }
+  dimension: schema_gcspath {
+    type: string
+    description: "GCS path to the schema.json file for the template's base query."
+    sql: ${TABLE}.SchemaGCSPath ;;
+  }
   dimension: screenshot_url {
     type: string
     description: "URL to an example screenshot of the report, used as input for Gemini."
@@ -73,10 +104,22 @@ view: report_list {
     description: "Optional: Status of the report definition (e.g., Active, Deprecated, Draft)."
     sql: ${TABLE}.Status ;;
   }
+  dimension: subtotal_configs_json {
+    type: string
+    sql: ${TABLE}.SubtotalConfigsJSON ;;
+  }
   dimension: template_url {
     type: string
     description: "GCS path to the latest generated HTML file (index.html) for this report definition instance."
     sql: ${TABLE}.TemplateURL ;;
+  }
+  dimension: user_attribute_mappings_json {
+    type: string
+    sql: ${TABLE}.UserAttributeMappingsJSON ;;
+  }
+  dimension: user_placeholder_mappings_json {
+    type: string
+    sql: ${TABLE}.UserPlaceholderMappingsJSON ;;
   }
   dimension: version {
     type: string
