@@ -17,7 +17,7 @@ constant: GCS_BUCKET_NAME {
 
 application: lookereiprint {
   label: "lookereiprint"
-  url: "https://storage.googleapis.com/report_screenshots_genaimarketingdemo/looker_frontend/bundle.js"
+  url: "https://dp-lemon-arcade-reward.trycloudflare.com/bundle.js"
   entitlements: {
     local_storage: yes # Assuming 'yes' is validated by your Looker instance
     navigation: yes
