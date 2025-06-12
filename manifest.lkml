@@ -29,7 +29,7 @@ application: lookereiprint {
     use_form_submit: yes
     use_embeds: yes
     core_api_methods: ["all_lookml_models", "lookml_model_explore","all_user_attributes","all_connections","search_folders", "run_inline_query", "me", "current_user", "all_looks", "run_look"]
-    external_api_urls: ["https://83d14716-08b3-4def-bdca-54f4b2af9f19-extensions.cloud.looker.com","https://looker-ext-code-17837811141.us-central1.run.app","http://localhost:8080","https://localhost:8080","http://localhost:8001","https://localhost:8001"] # Ensure this is your current ngrok URL if it's dynamic
+    external_api_urls: ["https://cdn.tiny.cloud","https://83d14716-08b3-4def-bdca-54f4b2af9f19-extensions.cloud.looker.com","https://looker-ext-code-17837811141.us-central1.run.app","http://localhost:8080","https://localhost:8080","http://localhost:8001","https://localhost:8001"] # Ensure this is your current ngrok URL if it's dynamic
     global_user_attributes: ["client_id"]
   }
 }
